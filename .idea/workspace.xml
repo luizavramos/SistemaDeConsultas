@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="88f8382b-1d25-4300-9234-bd581baef7cd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/agendamento-service/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/agendamento-service/src/main/java/com/tech_challenge/agendamento_service/graphql/resolver/ConsultaResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/agendamento-service/src/main/java/com/tech_challenge/agendamento_service/graphql/resolver/ConsultaResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agendamento-service/src/main/java/com/tech_challenge/agendamento_service/repository/ConsultaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/agendamento-service/src/main/java/com/tech_challenge/agendamento_service/repository/ConsultaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agendamento-service/src/main/java/com/tech_challenge/agendamento_service/service/ConsultaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agendamento-service/src/main/java/com/tech_challenge/agendamento_service/service/ConsultaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agendamento-service/src/main/resources/graphql/schemas.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/agendamento-service/src/main/resources/graphql/schemas.graphqls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
