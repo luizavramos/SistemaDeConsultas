@@ -29,13 +29,14 @@ public class ConsultaResolver {
         return service.criarConsulta(input);
     }
 
-    @MutationMapping
-    public Consulta atualizarConsulta(String id, ConsultaInput input) {
-        return consultaService.atualizarConsulta(id, input);
+    @QueryMapping
+    public List<Consulta> consultasFuturas(@Argument String pacienteId) {
+        return service.buscarFuturasPorPaciente(pacienteId);
     }
 
-    @QueryMapping
-    public List<Consulta> consultasFuturas(String pacienteId) {
-        return consultaService.buscarFuturasPorPaciente(pacienteId);
+    @MutationMapping
+    public Consulta atualizarConsulta(@Argument String id, @Argument ConsultaInput input) {
+        return service.atualizarConsulta(id, input);
     }
+
 }

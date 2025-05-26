@@ -15,13 +15,13 @@ input ConsultaInput {
 
 type Query {
     consultasPorPaciente(pacienteId: String!): [Consulta!]!
-    consultasFuturas(pacienteId: ID!): [Consulta]
+    consultasFuturas(pacienteId: String!): [Consulta!]!
 
 }
 
 type Mutation {
     criarConsulta(input: ConsultaInput!): Consulta!
-    atualizarConsulta(id: ID!, input: ConsultaInput!): Consulta
+    atualizarConsulta(id: String!, input: ConsultaInput!): Consulta
 
 }
 
