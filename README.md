@@ -83,17 +83,31 @@ Notificações (sem UI): mensagens no console
 
 Kafka: executado internamente nos containers
 
-🔍 Endpoints GraphQL
-Consultas
-query {
-  consultasPorPaciente(pacienteId: "p001") { id dataHora }
-}
+### 📌 Consultas GraphQL
 
-query {
-  consultasFuturas(pacienteId: "p001") { id dataHora }
-}
-Mutações
+#### 🔍 Queries
 
+```graphql
+query {
+  consultasPorPaciente(pacienteId: "p001") {
+    id
+    dataHora
+  }
+}
+```
+
+```graphql
+query {
+  consultasFuturas(pacienteId: "p001") {
+    id
+    dataHora
+  }
+}
+```
+
+#### 📝 Mutações
+
+```graphql
 mutation {
   criarConsulta(input: {
     pacienteId: "p001",
@@ -104,7 +118,9 @@ mutation {
     id
   }
 }
+```
 
+```graphql
 mutation {
   atualizarConsulta(id: "1", input: {
     pacienteId: "p001",
@@ -115,18 +131,10 @@ mutation {
     id
   }
 }
-📁 Estrutura dos Projetos
-SistemaDeConsultas/
-├── agendamento-service/
-│   ├── src/main/java/com/tech_challenge/agendamento_service/
-│   ├── resources/application.yml
-│   └── Dockerfile
-├── notificacao-service/
-│   ├── src/main/java/com/tech_challenge/notificacao_service/
-│   ├── resources/application.yml
-│   └── Dockerfile
-├── docker-compose.yml
-└── README.md
+```
+
+
+<pre lang="markdown"> ### 📁 Estrutura dos Projetos ```plaintext SistemaDeConsultas/ │ ├── agendamento-service/ │ ├── src/ │ │ └── main/ │ │ ├── java/ │ │ │ └── com/tech_challenge/agendamento_service/ │ │ │ ├── model/ │ │ │ ├── service/ │ │ │ ├── repository/ │ │ │ ├── kafka/ │ │ │ └── graphql/resolver/ │ │ └── resources/ │ │ └── application.yml │ └── Dockerfile │ ├── notificacao-service/ │ ├── src/ │ │ └── main/ │ │ ├── java/ │ │ │ └── com/tech_challenge/notificacao_service/ │ │ │ ├── consumer/ │ │ │ ├── model/ │ │ │ └── service/ │ │ └── resources/ │ │ └── application.yml │ └── Dockerfile │ ├── docker-compose.yml └── README.md ``` </pre>
 
 📦 Requisitos
 Java 17+
